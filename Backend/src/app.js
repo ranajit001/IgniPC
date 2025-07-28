@@ -19,4 +19,6 @@ app.use('/order',OrderRouter)
 
 app.listen(3000,async()=>{
     await connsctDb();
+    console.log('server started...');
+    
 })
