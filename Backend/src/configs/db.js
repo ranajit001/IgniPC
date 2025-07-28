@@ -5,7 +5,7 @@ config();
 
 export const connsctDb = async()=>{
     try {
-        await mongoose.connect(`mongodb+srv://ranajit:pass123@unit4.21hbz.mongodb.net/ignipc?retryWrites=true&w=majority&appName=unit4`);
+        await mongoose.connect(process.env.MONGO_URL);
         console.log('db connected');
         
     } catch (error) {
